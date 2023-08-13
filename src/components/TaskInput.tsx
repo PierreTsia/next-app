@@ -25,7 +25,6 @@ export const TaskInput = () => {
 
   const handleAddTask = () => {
     addTask({
-      id: Math.random(),
       title: value,
       completed: false,
     });

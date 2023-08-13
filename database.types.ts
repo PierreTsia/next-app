@@ -43,6 +43,40 @@ export interface Database {
           }
         ]
       }
+      tasks: {
+        Row: {
+          completed: boolean
+          created_at: string
+          id: number
+          profile_id: string
+          title: string
+          updated_at: string | null
+        }
+        Insert: {
+          completed?: boolean
+          created_at?: string
+          id?: number
+          profile_id: string
+          title: string
+          updated_at?: string | null
+        }
+        Update: {
+          completed?: boolean
+          created_at?: string
+          id?: number
+          profile_id?: string
+          title?: string
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tasks_profile_id_fkey"
+            columns: ["profile_id"]
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
     }
     Views: {
       [_ in never]: never

@@ -1,15 +1,14 @@
 import { createContext } from "react";
+
+import { Database } from "@/database.types";
 export const filters = ["All", "Active", "Completed"] as const;
 export type Filter = (typeof filters)[number];
-export interface ITask {
-  id: number;
-  title: string;
-  completed: boolean;
-}
+export type ITask = Database["public"]["Tables"]["tasks"]["Row"];
+export type ITaskInput = Database["public"]["Tables"]["tasks"]["Insert"];
 
 export interface TaskContextInterface {
   allTasks: ITask[];
-  addTask: (task: ITask) => void;
+  addTask: (task: Pick<ITask, "completed" | "title">) => void;
   removeTask: (id: number) => void;
   toggleTask: (id: number) => void;
   setActiveFilter: (filter: Filter) => void;
