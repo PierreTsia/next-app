@@ -4,10 +4,13 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@/database.types";
 import { _BaseCard } from "@/src/components/_BaseCard";
+import { useContext } from "react";
+import { ThemeContext } from "@/src/theme/ThemeContext";
 
 export default function AuthForm() {
   const supabase = createClientComponentClient<Database>();
   const redirectCallBackUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback`;
+  const { darkTheme } = useContext(ThemeContext);
 
   return (
     <_BaseCard>
@@ -15,8 +18,8 @@ export default function AuthForm() {
         supabaseClient={supabase}
         providers={["google"]}
         appearance={{ theme: ThemeSupa }}
-        theme="dark"
-        showLinks={false}
+        theme={darkTheme ? "dark" : "light"}
+        showLinks={true}
         redirectTo={redirectCallBackUrl}
       />
     </_BaseCard>
