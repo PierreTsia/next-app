@@ -7,6 +7,7 @@ import { _BaseCard } from "@/src/components/_BaseCard";
 
 export default function AuthForm() {
   const supabase = createClientComponentClient<Database>();
+  const redirectCallBackUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback`;
 
   return (
     <_BaseCard>
@@ -16,7 +17,7 @@ export default function AuthForm() {
         appearance={{ theme: ThemeSupa }}
         theme="dark"
         showLinks={false}
-        redirectTo="http://localhost:3000/auth/callback"
+        redirectTo={redirectCallBackUrl}
       />
     </_BaseCard>
   );
