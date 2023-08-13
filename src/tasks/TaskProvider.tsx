@@ -59,9 +59,9 @@ export default function TaskProvider({
   const addTask = async (task: Pick<ITask, "completed" | "title">) => {
     if (!profileId) return console.log("No profile id");
     const previousTaskPosition = sortBy(tasks, "position")[0]?.position;
-    const taskPosition = previousTaskPosition
-      ? previousTaskPosition / 2
-      : POSITION_INCREMENT;
+    const taskPosition = Math.round(
+      previousTaskPosition ? previousTaskPosition / 2 : POSITION_INCREMENT,
+    );
 
     const { data: newTask, error } = await supabase
       .from("tasks")
