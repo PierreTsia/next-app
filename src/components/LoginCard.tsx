@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { LoginCardLogo } from "@/src/components/LoginCardLogo";
 import { _BaseCard } from "@/src/components/_BaseCard";
+import AuthForm from "@/src/auth/AuthForm";
 
 export const LoginCard = () => {
   return (
-    <_BaseCard>
+    <AuthForm />
+    /*<_BaseCard>
       <LoginCardLogo />
       <form className="mt-6">
         <div className="mb-4">
@@ -36,6 +38,7 @@ export const LoginCard = () => {
       </form>
 
       <p className="mt-4 text-sm text-center">
+        {/!* eslint-disable-next-line react/no-unescaped-entities *!/}
         Don't have an account?{" "}
         <Link
           href="/signup"
@@ -44,6 +47,6 @@ export const LoginCard = () => {
           Sign up
         </Link>
       </p>
-    </_BaseCard>
+    </_BaseCard>*/
   );
 };
