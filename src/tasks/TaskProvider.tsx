@@ -5,6 +5,8 @@ import { ITask, TaskContext } from "@/src/tasks/TaskContext";
 import { Filter } from "@/src/tasks/TaskContext";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Database } from "@/database.types";
+import sortBy from "lodash/sortBy";
+import { POSITION_INCREMENT } from "@/hooks/useTasks";
 
 export default function TaskProvider({
   children,
@@ -21,7 +23,10 @@ export default function TaskProvider({
     getUser();
 
     const fetchTasks = async () => {
-      const { data, error } = await supabase.from("tasks").select("*");
+      const { data, error } = await supabase
+        .from("tasks")
+        .select("*")
+        .order("position", { ascending: true });
 
       if (error) console.log(error);
       if (data) {
@@ -35,11 +40,36 @@ export default function TaskProvider({
   const [activeFilter, setActiveFilter] = useState<Filter>("All");
   const [profileId, setProfileId] = useState<string>("");
 
+  const updateTask = async (task: ITask) => {
+    // Optimistic update to avoid UI Glitches
+    setTasks((curr) =>
+      sortBy(
+        curr.map((t) => (t.id === task.id ? task : t)),
+        "position",
+      ),
+    );
+    const { data: updatedTask, error } = await supabase
+      .from("tasks")
+      .update(task)
+      .match({ id: task.id })
+      .select("*");
+    if (error) console.log(error);
+  };
+
   const addTask = async (task: Pick<ITask, "completed" | "title">) => {
     if (!profileId) return console.log("No profile id");
+    const previousTaskPosition = sortBy(tasks, "position")[0]?.position;
+    const taskPosition = previousTaskPosition
+      ? previousTaskPosition / 2
+      : POSITION_INCREMENT;
+
     const { data: newTask, error } = await supabase
       .from("tasks")
-      .insert({ ...task, profile_id: profileId })
+      .insert({
+        ...task,
+        profile_id: profileId,
+        position: taskPosition,
+      })
       .select("*");
     if (error) console.log(error);
     if (newTask) {
@@ -113,6 +143,7 @@ export default function TaskProvider({
         activeFilter,
         setActiveFilter,
         clearCompleted,
+        updateTask,
       }}
     >
       {children}

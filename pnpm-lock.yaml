@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@hello-pangea/dnd':
+    specifier: ^16.3.0
+    version: registry.npmjs.org/@hello-pangea/dnd@16.3.0(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
   '@supabase/auth-helpers-nextjs':
     specifier: ^0.7.4
     version: registry.npmjs.org/@supabase/auth-helpers-nextjs@0.7.4(@supabase/supabase-js@2.32.0)
@@ -31,6 +34,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.4.13
     version: registry.npmjs.org/eslint-config-next@13.4.13(eslint@8.47.0)(typescript@5.1.6)
+  lodash:
+    specifier: ^4.17.21
+    version: registry.npmjs.org/lodash@4.17.21
   next:
     specifier: 13.4.13
     version: registry.npmjs.org/next@13.4.13(react-dom@18.2.0)(react@18.2.0)
@@ -40,6 +46,9 @@ dependencies:
   react:
     specifier: 18.2.0
     version: registry.npmjs.org/react@18.2.0
+  react-beautiful-dnd:
+    specifier: ^13.1.1
+    version: registry.npmjs.org/react-beautiful-dnd@13.1.1(react-dom@18.2.0)(react@18.2.0)
   react-dom:
     specifier: 18.2.0
     version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
@@ -54,6 +63,12 @@ dependencies:
     version: registry.npmjs.org/typescript@5.1.6
 
 devDependencies:
+  '@types/lodash':
+    specifier: ^4.14.197
+    version: registry.npmjs.org/@types/lodash@4.14.197
+  '@types/react-beautiful-dnd':
+    specifier: ^13.1.4
+    version: registry.npmjs.org/@types/react-beautiful-dnd@13.1.4
   supabase:
     specifier: '>=1.8.1'
     version: registry.npmjs.org/supabase@1.83.7
@@ -127,6 +142,30 @@ packages:
     name: '@eslint/js'
     version: 8.47.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  registry.npmjs.org/@hello-pangea/dnd@16.3.0(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-RYQ/K8shtJoyNPvFWz0gfXIK7HF3P3mL9UZFGMuHB0ljRSXVgMjVFI/FxcZmakMzw6tO7NflWLriwTNBow/4vw==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@hello-pangea/dnd/-/dnd-16.3.0.tgz}
+    id: registry.npmjs.org/@hello-pangea/dnd/16.3.0
+    name: '@hello-pangea/dnd'
+    version: 16.3.0
+    peerDependencies:
+      react: ^16.8.5 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.5 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.22.10
+      css-box-model: registry.npmjs.org/css-box-model@1.2.1
+      memoize-one: registry.npmjs.org/memoize-one@6.0.0
+      raf-schd: registry.npmjs.org/raf-schd@4.0.3
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-redux: registry.npmjs.org/react-redux@8.1.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+      redux: registry.npmjs.org/redux@4.2.1
+      use-memo-one: registry.npmjs.org/use-memo-one@1.1.3(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - react-native
     dev: false
 
   registry.npmjs.org/@humanwhocodes/config-array@0.11.10:
@@ -475,11 +514,26 @@ packages:
       tslib: registry.npmjs.org/tslib@2.6.1
     dev: false
 
+  registry.npmjs.org/@types/hoist-non-react-statics@3.3.1:
+    resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz}
+    name: '@types/hoist-non-react-statics'
+    version: 3.3.1
+    dependencies:
+      '@types/react': registry.npmjs.org/@types/react@18.2.20
+      hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics@3.3.2
+    dev: false
+
   registry.npmjs.org/@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz}
     name: '@types/json5'
     version: 0.0.29
     dev: false
+
+  registry.npmjs.org/@types/lodash@4.14.197:
+    resolution: {integrity: sha512-BMVOiWs0uNxHVlHBgzTIqJYmj+PgCo4euloGF+5m4okL3rEYzM2EEv78mw8zWSMM57dM7kVIgJ2QDvwHSoCI5g==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/lodash/-/lodash-4.14.197.tgz}
+    name: '@types/lodash'
+    version: 4.14.197
+    dev: true
 
   registry.npmjs.org/@types/node@20.4.9:
     resolution: {integrity: sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/node/-/node-20.4.9.tgz}
@@ -497,7 +551,14 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz}
     name: '@types/prop-types'
     version: 15.7.5
-    dev: false
+
+  registry.npmjs.org/@types/react-beautiful-dnd@13.1.4:
+    resolution: {integrity: sha512-4bIBdzOr0aavN+88q3C7Pgz+xkb7tz3whORYrmSj77wfVEMfiWiooIwVWFR7KM2e+uGTe5BVrXqSfb0aHeflJA==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/react-beautiful-dnd/-/react-beautiful-dnd-13.1.4.tgz}
+    name: '@types/react-beautiful-dnd'
+    version: 13.1.4
+    dependencies:
+      '@types/react': registry.npmjs.org/@types/react@18.2.20
+    dev: true
 
   registry.npmjs.org/@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/react-dom/-/react-dom-18.2.7.tgz}
@@ -505,6 +566,17 @@ packages:
     version: 18.2.7
     dependencies:
       '@types/react': registry.npmjs.org/@types/react@18.2.20
+    dev: false
+
+  registry.npmjs.org/@types/react-redux@7.1.25:
+    resolution: {integrity: sha512-bAGh4e+w5D8dajd6InASVIyCo4pZLJ66oLb80F9OBLO1gKESbZcRCJpTT6uLXX+HAB57zw1WTdwJdAsewuTweg==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/react-redux/-/react-redux-7.1.25.tgz}
+    name: '@types/react-redux'
+    version: 7.1.25
+    dependencies:
+      '@types/hoist-non-react-statics': registry.npmjs.org/@types/hoist-non-react-statics@3.3.1
+      '@types/react': registry.npmjs.org/@types/react@18.2.20
+      hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics@3.3.2
+      redux: registry.npmjs.org/redux@4.2.1
     dev: false
 
   registry.npmjs.org/@types/react@18.2.20:
@@ -515,12 +587,16 @@ packages:
       '@types/prop-types': registry.npmjs.org/@types/prop-types@15.7.5
       '@types/scheduler': registry.npmjs.org/@types/scheduler@0.16.3
       csstype: registry.npmjs.org/csstype@3.1.2
-    dev: false
 
   registry.npmjs.org/@types/scheduler@0.16.3:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.3.tgz}
     name: '@types/scheduler'
     version: 0.16.3
+
+  registry.npmjs.org/@types/use-sync-external-store@0.0.3:
+    resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz}
+    name: '@types/use-sync-external-store'
+    version: 0.0.3
     dev: false
 
   registry.npmjs.org/@types/websocket@1.0.5:
@@ -1027,6 +1103,14 @@ packages:
       which: registry.npmjs.org/which@2.0.2
     dev: false
 
+  registry.npmjs.org/css-box-model@1.2.1:
+    resolution: {integrity: sha512-a7Vr4Q/kd/aw96bnJG332W9V9LkJO69JRcaCYDUqjp6/z0w6VcZjgAcTbgFxEPfBgdnAwlh3iwu+hLopa+flJw==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/css-box-model/-/css-box-model-1.2.1.tgz}
+    name: css-box-model
+    version: 1.2.1
+    dependencies:
+      tiny-invariant: registry.npmjs.org/tiny-invariant@1.3.1
+    dev: false
+
   registry.npmjs.org/cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz}
     name: cssesc
@@ -1039,7 +1123,6 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/csstype/-/csstype-3.1.2.tgz}
     name: csstype
     version: 3.1.2
-    dev: false
 
   registry.npmjs.org/d@1.0.1:
     resolution: {integrity: sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/d/-/d-1.0.1.tgz}
@@ -1992,6 +2075,14 @@ packages:
       function-bind: registry.npmjs.org/function-bind@1.1.1
     dev: false
 
+  registry.npmjs.org/hoist-non-react-statics@3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz}
+    name: hoist-non-react-statics
+    version: 3.3.2
+    dependencies:
+      react-is: registry.npmjs.org/react-is@16.13.1
+    dev: false
+
   registry.npmjs.org/ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz}
     name: ignore
@@ -2332,6 +2423,12 @@ packages:
     version: 4.6.2
     dev: false
 
+  registry.npmjs.org/lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz}
+    name: lodash
+    version: 4.17.21
+    dev: false
+
   registry.npmjs.org/loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz}
     name: loose-envify
@@ -2348,6 +2445,18 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: registry.npmjs.org/yallist@4.0.0
+    dev: false
+
+  registry.npmjs.org/memoize-one@5.2.1:
+    resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz}
+    name: memoize-one
+    version: 5.2.1
+    dev: false
+
+  registry.npmjs.org/memoize-one@6.0.0:
+    resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/memoize-one/-/memoize-one-6.0.0.tgz}
+    name: memoize-one
+    version: 6.0.0
     dev: false
 
   registry.npmjs.org/merge2@1.4.1:
@@ -2903,6 +3012,34 @@ packages:
     version: 1.2.3
     dev: false
 
+  registry.npmjs.org/raf-schd@4.0.3:
+    resolution: {integrity: sha512-tQkJl2GRWh83ui2DiPTJz9wEiMN20syf+5oKfB03yYP7ioZcJwsIK8FjrtLwH1m7C7e+Tt2yYBlrOpdT+dyeIQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/raf-schd/-/raf-schd-4.0.3.tgz}
+    name: raf-schd
+    version: 4.0.3
+    dev: false
+
+  registry.npmjs.org/react-beautiful-dnd@13.1.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0Lvs4tq2VcrEjEgDXHjT98r+63drkKEgqyxdA7qD3mvKwga6a5SscbdLPO2IExotU1jW8L0Ksdl0Cj2AF67nPQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-beautiful-dnd/-/react-beautiful-dnd-13.1.1.tgz}
+    id: registry.npmjs.org/react-beautiful-dnd/13.1.1
+    name: react-beautiful-dnd
+    version: 13.1.1
+    peerDependencies:
+      react: ^16.8.5 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.5 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.22.10
+      css-box-model: registry.npmjs.org/css-box-model@1.2.1
+      memoize-one: registry.npmjs.org/memoize-one@5.2.1
+      raf-schd: registry.npmjs.org/raf-schd@4.0.3
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-redux: registry.npmjs.org/react-redux@7.2.9(react-dom@18.2.0)(react@18.2.0)
+      redux: registry.npmjs.org/redux@4.2.1
+      use-memo-one: registry.npmjs.org/use-memo-one@1.1.3(react@18.2.0)
+    transitivePeerDependencies:
+      - react-native
+    dev: false
+
   registry.npmjs.org/react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz}
     id: registry.npmjs.org/react-dom/18.2.0
@@ -2931,6 +3068,80 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz}
     name: react-is
     version: 16.13.1
+    dev: false
+
+  registry.npmjs.org/react-is@17.0.2:
+    resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz}
+    name: react-is
+    version: 17.0.2
+    dev: false
+
+  registry.npmjs.org/react-is@18.2.0:
+    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz}
+    name: react-is
+    version: 18.2.0
+    dev: false
+
+  registry.npmjs.org/react-redux@7.2.9(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Gx4L3uM182jEEayZfRbI/G11ZpYdNAnBs70lFVMNdHJI76XYtR+7m0MN+eAs7UHBPhWXcnFPaS+9owSCJQHNpQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-redux/-/react-redux-7.2.9.tgz}
+    id: registry.npmjs.org/react-redux/7.2.9
+    name: react-redux
+    version: 7.2.9
+    peerDependencies:
+      react: ^16.8.3 || ^17 || ^18
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.22.10
+      '@types/react-redux': registry.npmjs.org/@types/react-redux@7.1.25
+      hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics@3.3.2
+      loose-envify: registry.npmjs.org/loose-envify@1.4.0
+      prop-types: registry.npmjs.org/prop-types@15.8.1
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-is: registry.npmjs.org/react-is@17.0.2
+    dev: false
+
+  registry.npmjs.org/react-redux@8.1.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
+    resolution: {integrity: sha512-xJKYI189VwfsFc4CJvHqHlDrzyFTY/3vZACbE+rr/zQ34Xx1wQfB4OTOSeOSNrF6BDVe8OOdxIrAnMGXA3ggfw==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/react-redux/-/react-redux-8.1.2.tgz}
+    id: registry.npmjs.org/react-redux/8.1.2
+    name: react-redux
+    version: 8.1.2
+    peerDependencies:
+      '@types/react': ^16.8 || ^17.0 || ^18.0
+      '@types/react-dom': ^16.8 || ^17.0 || ^18.0
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+      react-native: '>=0.59'
+      redux: ^4 || ^5.0.0-beta.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+      redux:
+        optional: true
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.22.10
+      '@types/hoist-non-react-statics': registry.npmjs.org/@types/hoist-non-react-statics@3.3.1
+      '@types/react': registry.npmjs.org/@types/react@18.2.20
+      '@types/react-dom': registry.npmjs.org/@types/react-dom@18.2.7
+      '@types/use-sync-external-store': registry.npmjs.org/@types/use-sync-external-store@0.0.3
+      hoist-non-react-statics: registry.npmjs.org/hoist-non-react-statics@3.3.2
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+      react-is: registry.npmjs.org/react-is@18.2.0
+      redux: registry.npmjs.org/redux@4.2.1
+      use-sync-external-store: registry.npmjs.org/use-sync-external-store@1.2.0(react@18.2.0)
     dev: false
 
   registry.npmjs.org/react@18.2.0:
@@ -2964,6 +3175,14 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: registry.npmjs.org/picomatch@2.3.1
+    dev: false
+
+  registry.npmjs.org/redux@4.2.1:
+    resolution: {integrity: sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/redux/-/redux-4.2.1.tgz}
+    name: redux
+    version: 4.2.1
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.22.10
     dev: false
 
   registry.npmjs.org/regenerator-runtime@0.14.0:
@@ -3360,6 +3579,12 @@ packages:
       any-promise: registry.npmjs.org/any-promise@1.3.0
     dev: false
 
+  registry.npmjs.org/tiny-invariant@1.3.1:
+    resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.1.tgz}
+    name: tiny-invariant
+    version: 1.3.1
+    dev: false
+
   registry.npmjs.org/to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz}
     name: to-regex-range
@@ -3531,6 +3756,28 @@ packages:
     version: 4.4.1
     dependencies:
       punycode: registry.npmjs.org/punycode@2.3.0
+    dev: false
+
+  registry.npmjs.org/use-memo-one@1.1.3(react@18.2.0):
+    resolution: {integrity: sha512-g66/K7ZQGYrI6dy8GLpVcMsBp4s17xNkYJVSMvTEevGy3nDxHOfE6z8BVE22+5G5x7t3+bhzrlTDB7ObrEE0cQ==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/use-memo-one/-/use-memo-one-1.1.3.tgz}
+    id: registry.npmjs.org/use-memo-one/1.1.3
+    name: use-memo-one
+    version: 1.1.3
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+    dev: false
+
+  registry.npmjs.org/use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==, registry: https://npm-proxy.fury.io/mirakl/, tarball: https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz}
+    id: registry.npmjs.org/use-sync-external-store/1.2.0
+    name: use-sync-external-store
+    version: 1.2.0
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
     dev: false
 
   registry.npmjs.org/utf-8-validate@5.0.10:

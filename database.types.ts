@@ -48,6 +48,7 @@ export interface Database {
           completed: boolean
           created_at: string
           id: number
+          position: number | null
           profile_id: string
           title: string
           updated_at: string | null
@@ -56,6 +57,7 @@ export interface Database {
           completed?: boolean
           created_at?: string
           id?: number
+          position?: number | null
           profile_id: string
           title: string
           updated_at?: string | null
@@ -64,6 +66,7 @@ export interface Database {
           completed?: boolean
           created_at?: string
           id?: number
+          position?: number | null
           profile_id?: string
           title?: string
           updated_at?: string | null

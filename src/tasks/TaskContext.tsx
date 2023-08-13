@@ -11,6 +11,7 @@ export interface TaskContextInterface {
   addTask: (task: Pick<ITask, "completed" | "title">) => void;
   removeTask: (id: number) => void;
   toggleTask: (id: number) => void;
+  updateTask: (task: ITask) => void;
   setActiveFilter: (filter: Filter) => void;
   clearCompleted: () => void;
   activeFilter: Filter;
@@ -20,6 +21,7 @@ export const TaskContext = createContext<TaskContextInterface>({
   allTasks: [],
   addTask: () => {},
   removeTask: () => {},
+  updateTask: () => {},
   toggleTask: () => {},
   setActiveFilter: () => {},
   clearCompleted: () => {},
